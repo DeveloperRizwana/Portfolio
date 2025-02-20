@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+  background-color: #2a0f40;
+}
+
+.navbar {
+  height: 60px;
+  width: 100%;
+  background-color: #150720;
+  color: white;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar ul li {
+  list-style: none;
+  margin-right: 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  transition: 0.4s ease-in-out;
+}
+
+.navbar ul li a:hover {
+  color: #f29c13;
+}
+
+.hero-section {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero-section h1 {
+  color: #975bbf;
+  font-size: 3.8rem;
+  margin-top: 10rem;
+}
+
+.hero-section p,
+.hero-section a {
+  text-decoration: none;
+  color: white;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 0.2rem;
+  font-size: 1.4rem;
+}
+
+.about {
+  padding-left: 6rem;
+  margin-top: 12rem;
+}
+
+.about h2,
+.skills h2,
+.skill-box h3, .Projects h2, .Projects-box h3{
+  color: #975bbf;
+}
+
+.about p {
+  margin-top: 1rem;
+  color: white;
+}
+
+.skills , .Projects{
+  padding-left: 6rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 7rem;
+}
+
+.skills h2,.Projects h2 {
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.skills i, .Projects i {
+  color: #f29c13;
+  font-size: 3rem;
+}
+
+.skill-box-container, .Projects-box-container {
+    display: flex;
+    flex-direction: row;
+}
+.skill-box,.Projects-box  {
+    height: 60px;
+    width: 200px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3F2653;
+    margin-right: 2rem;
+    padding: 2rem;
+    flex-direction: column;
+}
+
+
+.skill-box h3,.Projects-box h3 {
+    margin-top: 0.8rem;
+}
