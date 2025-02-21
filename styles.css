@@ -10,7 +10,7 @@ body {
 .navbar {
   height: 60px;
   width: 100%;
-  background-color: #150720;
+  background: rgba(21, 7, 32, 0.6); /* Dark transparent effect */
   color: white;
   position: fixed;
   top: 0;
@@ -76,7 +76,8 @@ body {
 .about h2,
 .skills h2,
 .Projects h2,
-.Projects-box h3 {
+.Projects-box h3,
+#Contact h2 {
   color: #975bbf;
 }
 
@@ -106,9 +107,7 @@ p {
   margin-top: 7rem;
 }
 
-.skills h2,
-.Projects h2,
-.about h2 {
+h2 {
   flex-direction: column;
   margin-bottom: 1rem;
   font-size: 2rem;
@@ -140,10 +139,10 @@ p {
 }
 
 .Projects-box-container {
-  
   display: flex;
   flex-wrap: wrap;
   gap: 2.5rem;
+  margin-bottom: 6rem;
 }
 
 .Projects-box {
@@ -166,28 +165,27 @@ p {
   border: none;
   flex-direction: row;
   margin-bottom: 1.1rem;
+  margin-right: 1.1rem;
   color: #3f2653;
   font-size: 1.2rem;
 }
 
-.Projects-box a {
+.Projects-box p {
   display: flex;
   align-items: center;
-  gap: 5px;
-  flex-direction: row;
+  /* flex-direction: row; */
   text-decoration: none;
-  font-size: 1.3rem;
-}
-
-.Projects-box i{
+  margin-bottom: 1.1rem;
   font-size: 1.3rem;
   color: white;
 }
 
-.Projects-box p {
-  margin-bottom: 1.1rem;
-  font-size: 1.2rem;
+.Projects-box a,
+.Projects-box i {
+  color: white;
+  text-decoration: none;
 }
+
 .skill-box h3 {
   margin-top: 0.8rem;
 }
@@ -197,4 +195,106 @@ p {
 .about p:hover {
   transform: translateY(-5px);
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+#Contact {
+  padding-left: 6rem;
+}
+
+.contact-box {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.contact-box input,
+.contact-box textarea {
+  height: 40px;
+  width: 600px;
+  padding-left: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  background-color: #3f2653;
+  border: none;
+  border-radius: 13px;
+
+}
+
+.contact-box textarea {
+  padding-top: 1.2rem;
+}
+
+.contact-box button {
+  height: 40px;
+  width: 600px;
+  font-size: 1.1rem;
+  color: #2a0f40;
+  background-color: #f29c13;
+  border: none;
+  border-radius: 13px;
+
+}
+
+button:hover{
+  background-color: #da8907;
+  color: #2a0f40;
+  transition: 0.3s;
+}
+
+footer {
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(21, 7, 32);
+  height: 60px;
+  width: 100%;
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+    position: fixed;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+
+  .skills-box {
+    margin-bottom: 9rem;
+  }
+
+  .about p,.Projects p,.Projects button    {
+    font-size: 0.9rem;
+  }
+
+  .about, .skills, .Projects, #Contact {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: auto;
+  }
+
+  .contact-box input,
+  .contact-box textarea,
+  .contact-box button {
+    width: 80%;
+  }
+
+  .Projects-box {
+    width: 80%;
+    height: auto;
+  }
 }
