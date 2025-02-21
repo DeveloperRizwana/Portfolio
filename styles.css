@@ -289,7 +289,7 @@ footer {
 
   .contact-box input,
   .contact-box textarea,
-  .contact-box button {
+  .contact-box button, footer {
     width: 80%;
   }
 
