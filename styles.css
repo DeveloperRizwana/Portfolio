@@ -3,7 +3,7 @@
   padding: 0;
 }
 body {
-  font-family: sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #2a0f40;
 }
 
@@ -34,11 +34,12 @@ body {
 .navbar ul li a {
   text-decoration: none;
   color: white;
-  transition: 0.4s ease-in-out;
 }
 
-.navbar ul li a:hover {
+.navbar ul li a:hover,
+.hero-section i:hover,.hero-section p:hover {
   color: #f29c13;
+  transition: 0.4s ease-in-out;
 }
 
 .hero-section {
@@ -62,7 +63,7 @@ body {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   padding: 0.2rem;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .about {
@@ -72,50 +73,78 @@ body {
 
 .about h2,
 .skills h2,
-.skill-box h3, .Projects h2, .Projects-box h3{
+.skill-box h3,
+.Projects h2,
+.Projects-box h3 {
   color: #975bbf;
 }
 
 .about p {
   margin-top: 1rem;
+  margin-right: 7rem;
   color: white;
+  font-size: 1.2rem;
 }
 
-.skills , .Projects{
+.skills,
+.Projects {
   padding-left: 6rem;
   display: flex;
   flex-direction: column;
   margin-top: 7rem;
 }
 
-.skills h2,.Projects h2 {
-    flex-direction: column;
-    margin-bottom: 1rem;
+.skills h2,
+.Projects h2,
+.about h2 {
+  flex-direction: column;
+  margin-bottom: 1rem;
+  font-size: 2rem;
 }
 
-.skills i, .Projects i {
+.skills i {
   color: #f29c13;
   font-size: 3rem;
 }
 
-.skill-box-container, .Projects-box-container {
-    display: flex;
-    flex-direction: row;
-}
-.skill-box,.Projects-box  {
-    height: 60px;
-    width: 200px;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #3F2653;
-    margin-right: 2rem;
-    padding: 2rem;
-    flex-direction: column;
+.skill-box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
+.skill-box,
+.Projects-box {
+  height: 50px;
+  width: 200px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3f2653;
+  padding: 2rem;
+  flex-direction: column;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
 
-.skill-box h3,.Projects-box h3 {
-    margin-top: 0.8rem;
+.Projects-box-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.Projects-box {
+  height: 300px;
+  width: 300px;
+  align-items: flex-start;
+}
+.skill-box h3,
+.Projects-box h3 {
+  margin-top: 0.8rem;
+}
+
+.skill-box:hover,
+.Projects-box:hover {
+  transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.2);
 }
