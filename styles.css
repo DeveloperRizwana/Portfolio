@@ -37,7 +37,8 @@ body {
 }
 
 .navbar ul li a:hover,
-.hero-section i:hover,.hero-section p:hover {
+.hero-section i:hover,
+.hero-section p:hover {
   color: #f29c13;
   transition: 0.4s ease-in-out;
 }
@@ -69,14 +70,19 @@ body {
 .about {
   padding-left: 6rem;
   margin-top: 12rem;
+  margin-right: 3rem;
 }
 
 .about h2,
 .skills h2,
-.skill-box h3,
 .Projects h2,
 .Projects-box h3 {
   color: #975bbf;
+}
+
+h3,
+p {
+  color: white;
 }
 
 .about p {
@@ -84,6 +90,12 @@ body {
   margin-right: 7rem;
   color: white;
   font-size: 1.2rem;
+  height: 100px;
+  width: 95%;
+  background-color: #3f2653;
+  border-radius: 8px;
+  padding: 2rem;
+  border: 0.7px solid white;
 }
 
 .skills,
@@ -123,28 +135,66 @@ body {
   background-color: #3f2653;
   padding: 2rem;
   flex-direction: column;
+  border: 0.7px solid white;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .Projects-box-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  gap: 2rem;
+  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
 }
 
 .Projects-box {
-  height: 300px;
-  width: 300px;
+  height: 200px;
+  width: 90%;
   align-items: flex-start;
 }
-.skill-box h3,
+
 .Projects-box h3 {
+  margin-bottom: 1.1rem;
+  margin-top: 1.1rem;
+  font-size: 1.7rem;
+}
+
+.Projects-box button {
+  height: 30px;
+  width: 90px;
+  border-radius: 50px;
+  background-color: #f29c13;
+  border: none;
+  flex-direction: row;
+  margin-bottom: 1.1rem;
+  color: #3f2653;
+  font-size: 1.2rem;
+}
+
+.Projects-box a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-direction: row;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.Projects-box i{
+  font-size: 1.3rem;
+  color: white;
+}
+
+.Projects-box p {
+  margin-bottom: 1.1rem;
+  font-size: 1.2rem;
+}
+.skill-box h3 {
   margin-top: 0.8rem;
 }
 
 .skill-box:hover,
-.Projects-box:hover {
-  transform: scale(1.1);
+.Projects-box:hover,
+.about p:hover {
+  transform: translateY(-5px);
   background-color: rgba(255, 255, 255, 0.2);
 }
