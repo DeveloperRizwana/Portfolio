@@ -312,8 +312,11 @@ footer {
     margin-bottom: 1.5rem;
     font-size: 0.7rem;
     height: auto;
-    width: 60%;
-    padding-right: 1rem;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-right: 1rem; */
   }
 
   .contact-box input,
